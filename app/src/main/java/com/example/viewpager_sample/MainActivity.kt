@@ -19,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = ViewPagerFragmentAdapter(this)
     }
 
-    private class ViewPagerFragmentAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+    private class ViewPagerFragmentAdapter(fragmentActivity: FragmentActivity) :
+        FragmentStateAdapter(fragmentActivity) {
 
         override fun createFragment(position: Int): Fragment {
-            return when (position){
+            return when (position) {
                 0 -> MoviesFragment.newInstance()
                 1 -> EventsFragment.newInstance()
                 else -> MoviesFragment.newInstance()
