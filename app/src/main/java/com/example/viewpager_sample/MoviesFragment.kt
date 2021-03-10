@@ -8,11 +8,15 @@ import androidx.fragment.app.Fragment
 import com.example.viewpager_sample.databinding.FragmentMoviesBinding
 import com.sergivonavi.materialbanner.Banner
 
-class MoviesFragment : Fragment(){
+class MoviesFragment : Fragment() {
 
     private lateinit var binding: FragmentMoviesBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         binding = FragmentMoviesBinding.inflate(layoutInflater)
         val view = binding.root
@@ -31,5 +35,7 @@ class MoviesFragment : Fragment(){
         return view
     }
 
-    companion object { fun newInstance() = MoviesFragment() }
+    companion object {
+        fun newInstance() = MoviesFragment()
+    }
 }

@@ -12,7 +12,11 @@ class EventsFragment : Fragment() {
 
     private lateinit var binding: FragmentEventsBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         binding = FragmentEventsBinding.inflate(layoutInflater)
         val view = binding.root
@@ -30,5 +34,7 @@ class EventsFragment : Fragment() {
         return view
     }
 
-    companion object { fun newInstance() = EventsFragment() }
+    companion object {
+        fun newInstance() = EventsFragment()
+    }
 }
